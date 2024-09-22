@@ -1,0 +1,215 @@
+Execution context 
+
+variable enviroment 
+    memory allloctaion is happend here 
+
+thread of execution
+    code will run line by line
+
+
+Hoisting 
+
+The phase of creation variable in memory before the execution 
+
+
+
+callstack -- where the execution of context will happen in order of fucntion or code called 
+ 
+function works on js by creating the separate block for its variable declare in exceution context and 
+clear it when its done its part
+
+
+global space -----------------------
+
+any varibale r func not inside a functioon is available in global space 
+
+scope chain -lexical enviroment=============================
+
+
+every local exceution context will have its own lexical enviroment where its have access to the variable and fucntion of 
+its parent 
+
+when you invoke a fucntion a execution context is created
+
+
+lexical enviroment is a local memory along with the lexical enviroments of its parent
+
+
+temporal deadzone -------------------------------------------------------------------
+
+time between the let a is hoisted and a value assigned to it is temporal dead zone
+
+
+* redeclartion in let in not allowed 
+let a =10
+let a =100
+
+* redeclartion in var in allowed 
+var a =10
+var a =100
+
+
+    let and const where created in separate memory space
+
+    u can declare and initilize it later using the *let variable but can't in const 
+
+    redeclartion is not allowed in *const  
+
+    Type Error ---------->>> const b  = 1000
+    b=10
+    syntax error --------->>> const b;
+
+    temporal deadzone produce the reference error
+
+
+
+Block in js ------------------------------------------------------------------------
+// block
+
+{
+    //compound statement
+    var a = 10
+    console.log(a)
+}
+
+
+// block scope 
+// the variable that can be accessed inside the block are called block scope
+{
+    var a = 10
+    console.log(a)
+}
+
+
+closure 
+
+fucntion along with its lexical scope forms a bundle forms a closure
+here only the reference is persist
+
+
+uses of closure
+
+module design pattern 
+currying
+fucntion like once 
+memoize
+maintaining state in async world
+setTimeouts
+iterators
+
+its helps in data hiding and encapsuplation
+
+
+function x() {
+    var a = 10
+    function y() {
+        var b = 20;
+        function z() {
+            console.log(a, b);
+        }
+        z();
+    }
+    y();
+}
+x();
+
+
+settimeout closure question
+
+
+function x() {
+    for (var i = 0; i <= 5; i++) {
+        function close(x){
+            setTimeout(() => {
+                console.log(x);
+            }, i * 1000)
+        }
+        close(i)
+    }
+    console.log("my closure call");
+}
+x();
+
+
+
+fucntions------------------------------------------------
+
+
+
+
+// function statement
+
+function a(){
+    console.log("a is called");
+}
+
+// function expression 
+
+var d = function (param1){
+    console.log("a is called");
+}
+
+// anyonomus fn
+// function (){
+//     console.log("a is called");
+// }
+
+// named function expression
+var da = function xyz (){
+    console.log("a is called");
+}
+
+// first class function - ability to used like values 
+// first class citizens
+//  the ability to use the fn  as values and can be passed as arguments and can be returened from fns this 
+    // ability is called first class fn in js
+
+d(function(){
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+
+
+ideal version
+appreciate other as much as possible - not by pleasing 
+genuienly appreciate 
+dont seek advice from un-experienced
+learn to happy without external factors
+
+
+
+personality changes
+
+what its right now
+
+pre assuming before even trying 
+
+
+real confident
+
+insecurity and source
+
+appearence --- inside
+public speaking ---- inside
+
+
+positive self image positive visualization*
+
+
+
+how do you beleive on yourself
+self efficacy*
+i will do this best 
